@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function() {
         card.classList.add('is-selected');
         selectedCards.push(card);
       }else{
-        alert('max cards');
+        selectedCards.pop(card);
       }
 
       console.log(selectedCards.length);
