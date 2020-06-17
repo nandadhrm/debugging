@@ -14,9 +14,9 @@ window.addEventListener('DOMContentLoaded', function() {
       // collection of selected cards and apply the correct CSS class.
       if (selectedCards.length < 2) {
         card.classList.add('is-selected');
-        selectedCards += 1;
+        selectedCards.push(card);
       }else{
-        card.classList.remove('is-selected');
+        alert('max cards');
       }
 
       console.log(selectedCards.length);
