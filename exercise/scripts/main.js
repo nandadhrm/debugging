@@ -14,12 +14,17 @@ window.addEventListener('DOMContentLoaded', function() {
       // collection of selected cards and apply the correct CSS class.
       if (selectedCards.length < 2) {
         card.classList.add('is-selected');
+        selectedCards.push(card);
+      }else{
+        selectedCards.pop(card);
       }
+
+      console.log(selectedCards.length);
 
       // If we have selected two cards, see if they match.
       if (selectedCards.length === 2) {
         var card1 = selectedCards[0];
-        var card2 = selectedCards[0];
+        var card2 = selectedCards[1];
 
         // If the cards match, add them to the collection of matched cards and
         // apply the correct CSS class.
